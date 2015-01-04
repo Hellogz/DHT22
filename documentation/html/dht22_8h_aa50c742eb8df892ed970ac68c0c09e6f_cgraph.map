@@ -1,0 +1,4 @@
+<map id="DHT22_InitiateTransfer" name="DHT22_InitiateTransfer">
+<area shape="rect" id="node2" href="$dht22_8c.html#a5fee0dc6b5cd41cfa086ab69b35ddb5e" title="DHT22_SetPinOUT" alt="" coords="213,5,352,32"/>
+<area shape="rect" id="node3" href="$dht22_8c.html#ad4175670c5d079ac695155e1f2d6122e" title="DHT22_SetPinIN" alt="" coords="221,56,345,83"/>
+</map>
