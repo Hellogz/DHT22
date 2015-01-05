@@ -22,6 +22,6 @@ int main(void) {
 		DHT22_ReadData(&dht);
 		float temp=dht.temp;
 		float humidity=dht.hum;
-		HAL_Delay(100);
+		HAL_Delay(3000);
 	}
 }
