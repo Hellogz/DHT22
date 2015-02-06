@@ -150,9 +150,15 @@ void DHT22_InterruptHandler(DHT22_HandleTypeDef* handle) {
 DHT22_RESULT DHT22_ReadData(DHT22_HandleTypeDef* handle) {
 
 	DHT22_InitiateTransfer(handle);
-	while (handle->state == DHT22_RECEIVING);
+	uint32_t startTick=HAL_GetTick();
+	while (handle->state == DHT22_RECEIVING && HAL_GetTick()-startTick<1000);
 	if(handle->crcErrorFlag==1){
 		return DHT22_CRC_ERROR;
+	}
+	if(handle->state!=DHT22_RECEIVED){
+		return DHT22_ERROR;
+	}else{
+		handle->state=DHT22_READY;
 	}
 	return DHT22_OK;
 }

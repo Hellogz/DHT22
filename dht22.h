@@ -46,6 +46,7 @@ typedef struct{
 	IRQn_Type			timerIRQn;
 	uint32_t			gpioAlternateFunction;
 	uint16_t			lastVal;
+	void				(*errorCallback)(DHT22_RESULT);
 } DHT22_HandleTypeDef;
 
 /**
